@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Sarah Thompson",
+    "specialist": "Veterinary Surgeon & Pet Nutrition Expert",
+    "visitingTime": "Mon - Fri, 10:00 AM - 4:00 PM"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Ryan Ahmed",
+    "specialist": "Small Animal & Exotic Pet Specialist",
+    "visitingTime": "Tue - Sat, 11:00 AM - 6:00 PM"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Emily Carter",
+    "specialist": "Dermatology & Allergy Care Specialist",
+    "visitingTime": "Mon, Wed & Fri, 9:30 AM - 3:00 PM"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Jason Lee",
+    "specialist": "Orthopedic & Rehabilitation Expert",
+    "visitingTime": "Thu - Sun, 12:00 PM - 7:00 PM"
+  }
+]
