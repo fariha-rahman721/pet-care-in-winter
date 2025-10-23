@@ -1,14 +1,32 @@
-import React from 'react';
+import React, { use } from 'react';
 import { NavLink } from 'react-router';
+import { AuthContext } from '../Provider/AuthProvider';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const Navbar = () => {
+    const {user, logOut} = use(AuthContext);
+    const handleLogout = () =>{
+    logOut().then(() =>{
+        toast.success('successfully logged out')
+    }  ).catch((error) =>{
+        console.log(error)
+    })
+    }
     const links = <>
-    <NavLink className='hover:text-blue-900 hover:font-extrabold' to='/'><li>Home</li></NavLink>
-    <NavLink className='hover:text-blue-900 hover:font-extrabold' to='/services'><li>Services</li></NavLink>
-    <NavLink className='hover:text-blue-900 hover:font-extrabold' to='/myProfile'><li>MyProfile</li></NavLink>
+    <NavLink className={({ isActive }) => 
+          isActive ? "text-blue-900 font-extrabold" : "hover:text-blue-900 hover:font-extrabold"
+        } to='/'>Home</NavLink>
+    <NavLink className={({ isActive }) => 
+          isActive ? "text-blue-900 font-extrabold" : "hover:text-blue-900 hover:font-extrabold"
+        } to='/services'>Services</NavLink>
+    <NavLink className={({ isActive }) => 
+          isActive ? "text-blue-900 font-extrabold" : "hover:text-blue-900 hover:font-extrabold"
+        } to='/myProfile'>MyProfile</NavLink>
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm">
+            
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -16,7 +34,7 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow cursor-pointer">
                         
                 {links}
                     </ul>
@@ -32,8 +50,12 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                {
+                    user? <button onClick={handleLogout} className='btn bg-blue-400 text-white cursor-pointer'>LogOut</button> : <NavLink to='/auth/login' className='btn bg-blue-400 text-white cursor-pointer'>Login</NavLink>
+                }
+                
             </div>
+            <Toaster></Toaster>
         </div>
     );
 };

@@ -1,32 +1,47 @@
 [
   {
     "id": 1,
-    "title": "Keep Pets Warm Indoors",
-    "tips": "Make sure your pet has a cozy sleeping area away from cold floors and drafts. Use blankets or a soft bed to help them stay warm."
+    "title": "Keep Your Pet Warm and Comfortable",
+    "tips": "During winter, make sure your pet has a warm, cozy place to sleep. Avoid keeping their bed directly on cold tile or near drafty windows. Use a soft blanket or thermal bedding to retain body heat. For smaller pets or short-haired breeds, consider providing a heated pad or thicker bedding to help them stay comfortable through the night."
   },
   {
     "id": 2,
-    "title": "Protect Their Paws",
-    "tips": "Clean your pet’s paws after walks to remove salt or ice. Consider using pet-safe booties or paw balm to prevent cracks and irritation."
+    "title": "Dress Them for the Weather",
+    "tips": "Cold weather can be especially harsh on small or short-haired pets. Use pet sweaters, coats, or booties when going outdoors. Always ensure the clothing fits comfortably — not too tight or too loose. Avoid synthetic materials that may cause itching, and dry any wet clothing immediately after returning from outside."
   },
   {
     "id": 3,
-    "title": "Dress for the Weather",
-    "tips": "Short-haired pets or small breeds may need a sweater or coat when going outside. Make sure it fits comfortably and doesn’t restrict movement."
+    "title": "Protect Their Paws from Ice and Chemicals",
+    "tips": "Snow, salt, and antifreeze chemicals can irritate your pet’s paws or even cause burns. Before walks, apply a thin layer of paw balm to create a protective barrier. After returning home, gently wash and dry your pet’s paws with warm water to remove any residue. Trim the fur between paw pads to prevent ice buildup."
   },
   {
     "id": 4,
-    "title": "Limit Outdoor Time",
-    "tips": "Avoid keeping pets outdoors for long periods in freezing weather. Keep walks short and dry them off as soon as you come back inside."
+    "title": "Keep Hydration Levels Up",
+    "tips": "Many pets drink less water during winter, which can lead to dehydration. Always provide fresh, room-temperature water and check that it hasn’t frozen if kept outside. Wet food can also help maintain hydration. Remember that hydration supports their coat, skin, and joint health during cold, dry months."
   },
   {
     "id": 5,
-    "title": "Keep Water from Freezing",
-    "tips": "Always provide fresh, unfrozen water. Use a heated water bowl or change the water often to keep your pet hydrated during cold days."
+    "title": "Monitor Nutrition and Weight",
+    "tips": "It’s easy for pets to gain weight in winter because they move less. Consult your vet to adjust meal portions according to their activity level. Choose a balanced diet rich in protein and essential fatty acids to support their immune system and keep their coat shiny. Avoid excessive treats, even when your pet looks extra cute in their sweater!"
   },
   {
     "id": 6,
-    "title": "Watch for Frostbite and Hypothermia",
-    "tips": "Check your pet’s ears, tail, and paws for pale or cold skin. If you notice shivering, weakness, or lethargy, warm them up and call your vet."
+    "title": "Limit Outdoor Time in Harsh Weather",
+    "tips": "Even if your pet enjoys playing outside, avoid long outdoor sessions during freezing temperatures. Watch for signs of discomfort such as shivering, lifting paws off the ground, or whining. If necessary, take shorter but more frequent walks and dry your pet completely after returning home to prevent hypothermia."
+  },
+  {
+    "id": 7,
+    "title": "Ensure a Cozy Resting Area Indoors",
+    "tips": "Make sure your pet’s resting space is warm, dry, and comfortable. Avoid placing beds near doors or cold floors. If you have tiled or concrete flooring, use rugs or carpets underneath. Creating a den-like space with soft bedding will make your pet feel safe and warm during long winter nights."
+  },
+  {
+    "id": 8,
+    "title": "Pay Attention to Skin and Coat Health",
+    "tips": "Cold air and indoor heating can make your pet’s skin dry and flaky. Brush their coat regularly to distribute natural oils and reduce shedding. Avoid over-bathing, as frequent baths strip away essential oils. Use moisturizing sprays or vet-approved supplements to keep their coat healthy and shiny throughout winter."
+  },
+  {
+    "id": 9,
+    "title": "Keep Them Active Indoors",
+    "tips": "When outdoor play isn’t possible due to extreme cold, engage your pet in indoor games. Play fetch in the hallway, teach new tricks, or use interactive toys to keep them mentally and physically active. Regular activity helps reduce boredom and keeps their energy balanced during the less active winter months."
   }
 ]
