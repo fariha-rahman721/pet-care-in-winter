@@ -10,7 +10,7 @@ const Register = () => {
     const handleRegister = (e) => {
         
         e.preventDefault();
-        console.log(e.target)
+        // console.log(e.target)
         const form = e.target;
         const name = form.name.value;
         const photo = form.photo.value;
@@ -31,7 +31,7 @@ const Register = () => {
         }
 
 
-        console.log({ name, photo, email, password })
+        // console.log({ name, photo, email, password })
         createUser(email, password)
             .then(result => {
                 const user = result.user;
@@ -39,7 +39,9 @@ const Register = () => {
                     setUser({ ...user, displayName: name, photoURL: photo });
                     navigate('/')
                 }).catch((error) => {
-                    console.log(error)
+                    const errorMessage = error.message;
+                    toast.error(errorMessage)
+                    // console.log(error)
                     setUser(user);
                 })
             })

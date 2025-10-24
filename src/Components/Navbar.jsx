@@ -11,7 +11,8 @@ const Navbar = () => {
     logOut().then(() =>{
         toast.success('successfully logged out')
     }  ).catch((error) =>{
-        console.log(error)
+        const errorMessage = error.message;
+        toast.error(errorMessage)
     })
     }
     const links = <>
