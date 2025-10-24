@@ -26,7 +26,7 @@ const Navbar = () => {
         } to='/myProfile'>MyProfile</NavLink>
     </>
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="w-11/12 mx-auto navbar bg-transparent">
             
             <div className="navbar-start">
                 <div className="dropdown">
@@ -51,9 +51,9 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <img className='w-13 h-13 rounded-full' src={`${user? user.photoURL : userIcon}`} alt="" />
+                <img className='w-13 h-13 mr-3 rounded-full' src={`${user? user.photoURL : userIcon}`} alt="" />
                 {
-                    user? <button onClick={handleLogout} className='btn bg-blue-400 text-white cursor-pointer'>LogOut</button> : <NavLink to='/auth/login' className='btn bg-blue-400 text-white cursor-pointer'>Login</NavLink>
+                    user? <button onClick={handleLogout} className='btn bg-amber-600 text-white hover:bg-amber-400 cursor-pointer'>LogOut</button> : <NavLink to='/auth/login' className='btn bg-amber-600 hover:bg-amber-400 text-white cursor-pointer'>Login</NavLink>
                 }
                 
             </div>

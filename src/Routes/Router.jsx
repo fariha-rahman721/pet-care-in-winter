@@ -11,6 +11,7 @@ import PrivateRoute from "../Provider/PrivateRoute";
 import Loading from "../Components/Pages/Loading";
 import ServiceDetails from "../Components/Pages/ServiceDetails";
 
+
 const router = createBrowserRouter(
     [
         {
@@ -44,7 +45,9 @@ const router = createBrowserRouter(
                 },
                 {
                     path: '/myProfile',
-                    element: <MyProfile></MyProfile>
+                    element: <PrivateRoute>
+                        <MyProfile></MyProfile>
+                    </PrivateRoute>
                 },
         {
             path: '/auth',
@@ -54,6 +57,7 @@ const router = createBrowserRouter(
                     path: '/auth/login',
                     element: <Login></Login>,
                 },
+                
                 {
                     path: '/auth/register',
                     element: <Register></Register>,
@@ -69,7 +73,8 @@ const router = createBrowserRouter(
             loader: () => fetch('/careService.json'),
              hydrateFallbackElement: <Loading></Loading>
             
-        }
+        },
+        
     ]
 )
 

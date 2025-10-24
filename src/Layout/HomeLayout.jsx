@@ -14,18 +14,18 @@ import Navbar from '../Components/Navbar';
 
 const HomeLayout = () => {
     return (
-        <div className='w-11/12 mx-auto'>
-            <header>
+        <div >
+            <header className='w-11/12 mx-auto'>
                <Navbar></Navbar> 
 
         </header>
-        <section>
+        <section className='w-11/12 mx-auto'>
             <Hero></Hero>
         </section>
-        <main>
+        <main className='w-11/12 mx-auto'>
          <Card></Card>
             <Outlet></Outlet>
-            <section>
+            <section className='w-11/12 mx-auto'>
                <CareTips></CareTips>
                 <ExpertInfo></ExpertInfo>
             </section>
