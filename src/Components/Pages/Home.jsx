@@ -1,8 +1,11 @@
 import React from 'react';
 import { Navigate } from 'react-router';
 
+
 const Home = () => {
-    return <Navigate to='/'></Navigate>
+    return (
+        <Navigate to='/'></Navigate>
+    )
 };
 
 export default Home;

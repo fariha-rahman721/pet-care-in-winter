@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const SingleCard = ({ service }) => {
     return (
         <div className="card bg-base-100 w-96 shadow-sm">
             <figure>
-                <img className='w-92 h-68 py-2'
+                <img className='w-92 h-68 py-2 rounded-xl'
                     src={service.image}
                     alt="Shoes" />
             </figure>
@@ -15,7 +16,7 @@ const SingleCard = ({ service }) => {
                     <p className='w-5 bg-amber-100 rounded text-center p-2 text-[15px] font-semibold'>Price: ${service.price}</p>
                 </div>
                 <div className="card-actions justify-center">
-                    <button className="btn btn-primary">View details</button>
+                <Link to={`/services/${service.id}`} className="btn btn-primary">View details</Link>
                 </div>
             </div>
         </div>

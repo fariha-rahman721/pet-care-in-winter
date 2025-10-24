@@ -6,6 +6,9 @@ import MyProfile from "../Components/Pages/MyProfile";
 import Login from "../Components/Pages/Login";
 import Register from "../Components/Pages/Register";
 import AuthLayout from "../Layout/AuthLayout";
+import CardDetails from "../Components/CardDetails/CardDetails";
+import PrivateRoute from "../Provider/PrivateRoute";
+import Loading from "../Components/Pages/Loading";
 
 const router = createBrowserRouter(
     [
@@ -22,12 +25,17 @@ const router = createBrowserRouter(
             
         },
         {
-                    path: '/services',
-                    Component: <Services></Services>
+                    path: '/services/:id',
+                    element: <PrivateRoute>
+                        <Services></Services>
+                    </PrivateRoute>,
+                    loader: () => fetch('/careService.json'),
+                    hydrateFallbackElement: <Loading></Loading>
+
                 },
                 {
                     path: '/myProfile',
-                    Component: <MyProfile></MyProfile>
+                    element: <MyProfile></MyProfile>
                 },
         {
             path: '/auth',
@@ -45,6 +53,13 @@ const router = createBrowserRouter(
 
             ]
 
+        },
+        {
+            path: '/cardDetails',
+            element: <CardDetails></CardDetails>,
+            loader: () => fetch('/careService.json'),
+             hydrateFallbackElement: <Loading></Loading>
+            
         }
     ]
 )

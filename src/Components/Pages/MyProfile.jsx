@@ -1,9 +1,12 @@
 import React from 'react';
+import Navbar from '../Navbar';
 
 const MyProfile = () => {
     return (
         <div>
-            my prof
+           <header className='w-11/12 mx-auto'> 
+            <Navbar></Navbar>
+           </header>
         </div>
     );
 };

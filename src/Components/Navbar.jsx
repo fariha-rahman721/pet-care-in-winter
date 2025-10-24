@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import { NavLink } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
+import userIcon from '/userIcon.jpg'
 
 
 const Navbar = () => {
@@ -50,6 +51,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                <img className='w-13 h-13 rounded-full' src={`${user? user.photoURL : userIcon}`} alt="" />
                 {
                     user? <button onClick={handleLogout} className='btn bg-blue-400 text-white cursor-pointer'>LogOut</button> : <NavLink to='/auth/login' className='btn bg-blue-400 text-white cursor-pointer'>Login</NavLink>
                 }

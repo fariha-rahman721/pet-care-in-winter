@@ -1,6 +1,6 @@
 [
   {
-    "serviceId": 1,
+    "id": 1,
     "serviceName": "Winter Coat Fitting for Dogs",
     "providerName": "PawCare Studio",
     "providerEmail": "info@pawcare.com",
@@ -12,7 +12,7 @@
     "category": "Clothing"
   },
   {
-    "serviceId": 2,
+    "id": 2,
     "serviceName": "Winter Grooming & Paw Treatment",
     "providerName": "CozyPets Grooming",
     "providerEmail": "hello@cozypets.com",
@@ -24,7 +24,7 @@
     "category": "Grooming"
   },
   {
-    "serviceId": 3,
+    "id": 3,
     "serviceName": "Indoor Warm-Zone Kennel for Small Pets",
     "providerName": "SafePet Suites",
     "providerEmail": "contact@safepetsuites.com",
@@ -36,7 +36,7 @@
     "category": "Boarding"
   },
   {
-    "serviceId": 4,
+    "id": 4,
     "serviceName": "Anti-Freeze Salt Paw Rinse & Wax Treatment",
     "providerName": "Paw Protect Hub",
     "providerEmail": "support@pawprotecthub.com",
@@ -48,7 +48,7 @@
     "category": "PawCare"
   },
   {
-    "serviceId": 5,
+    "id": 5,
     "serviceName": "Cold Weather Coat Check & Skin Moisture Spa",
     "providerName": "FurComfort Spa",
     "providerEmail": "hello@furcomfortspa.com",
@@ -60,7 +60,7 @@
     "category": "Spa"
   },
   {
-    "serviceId": 6,
+    "id": 6,
     "serviceName": "Winter Outdoor Walk Supervision & Booties Service",
     "providerName": "ChillWalk Pet Care",
     "providerEmail": "info@chillwalkpetcare.com",
@@ -72,7 +72,7 @@
     "category": "Walking"
   },
   {
-    "serviceId": 7,
+    "id": 7,
     "serviceName": "Cat Winter Indoor Play & Warm-Bed Setup",
     "providerName": "WhiskerWarm Pet Services",
     "providerEmail": "contact@whiskerwarm.com",
@@ -84,43 +84,7 @@
     "category": "IndoorPlay"
   },
   {
-    "serviceId": 8,
-    "serviceName": "Small Mammal Winter Habitat Heating Consultation",
-    "providerName": "TinyPaws Habitat Care",
-    "providerEmail": "hello@tinypaws.com",
-    "price": 20,
-    "rating": 4.65,
-    "slotsAvailable": 5,
-    "description": "Tailored consultation to ensure your rabbit/hamster/guinea-pig’s habitat stays warm, draft-free and safe in winter.",
-    "image": "https://images.unsplash.com/photo-1572982156026-27e0a12f3603",
-    "category": "Consultation"
-  },
-  {
-    "serviceId": 9,
-    "serviceName": "Bird Aviary Cold-Draft Proofing & Heating Setup",
-    "providerName": "FeatheredFriends Care",
-    "providerEmail": "info@featheredfriends.com",
-    "price": 45,
-    "rating": 4.8,
-    "slotsAvailable": 2,
-    "description": "We check outdoor aviaries or winter bird houses, install safe heaters, cover drafts and ensure water doesn't freeze.",
-    "image": "https://www.aviculturehub.com.au/wp-content/uploads/2017/07/PXL_20210530_042922844-880x660.jpg",
-    "category": "HabitatCare"
-  },
-  {
-    "serviceId": 10,
-    "serviceName": "Puppy Cold-Weather Socialisation Session (Indoor)",
-    "providerName": "PupStart Winter Club",
-    "providerEmail": "signup@pupstart.com",
-    "price": 32,
-    "rating": 4.7,
-    "slotsAvailable": 6,
-    "description": "Indoor group socialisation for puppies including warm play area, winter-proof floor, trimming nails safe for winter boots.",
-    "image": "https://images.pexels.com/photos/3748352/dogs-playing-indoor-3748352.jpeg",
-    "category": "Socialisation"
-  },
-  {
-    "serviceId": 11,
+    "id": 8,
     "serviceName": "Senior Dog Warm-Floor Rest Area & Monitoring",
     "providerName": "GoldenYears Pet Support",
     "providerEmail": "care@goldenyearsps.com",
@@ -132,15 +96,15 @@
     "category": "SeniorCare"
   },
   {
-    "serviceId": 12,
-    "serviceName": "Holiday & Winter Photo-Shoot + Cozy Outfit Rental",
-    "providerName": "PetPortrait Winter Edition",
-    "providerEmail": "photos@petportraitwinters.com",
-    "price": 50,
-    "rating": 4.95,
-    "slotsAvailable": 3,
-    "description": "Capture your pet in a winter-theme shoot with cozy outfits, warm blanket props, snow-backdrop and prints to remember the season.",
-    "image": "https://images.pexels.com/photos/4598998/dog-winter-photoshoot-4598998.jpeg",
-    "category": "Photography"
+    "id": 9,
+    "serviceName": "Bird Aviary Cold-Draft Proofing & Heating Setup",
+    "providerName": "FeatheredFriends Care",
+    "providerEmail": "info@featheredfriends.com",
+    "price": 45,
+    "rating": 4.8,
+    "slotsAvailable": 2,
+    "description": "We check outdoor aviaries or winter bird houses, install safe heaters, cover drafts and ensure water doesn't freeze.",
+    "image": "https://www.aviculturehub.com.au/wp-content/uploads/2017/07/PXL_20210530_042922844-880x660.jpg",
+    "category": "HabitatCare"
   }
 ]

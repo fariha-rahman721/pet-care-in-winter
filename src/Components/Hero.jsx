@@ -1,51 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Hero = () => {
+    const images = [
+        '/bg1.jpg',
+        '/bg2.jpg',
+        '/bg3.jpg',
+        '/bg4.jpg',
+
+    ];
+
+    const [current, setCurrent] = useState(0);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % images.length)
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
     return (
-        <div className=''>
-            <div className="carousel  w-full">
-                
-                <div id="item1" className="carousel-item w-full relative">
-                    <img
-                        src="/bg1.jpg"
-                        className="w-full filter brightness-75 opacity-80" />
+        <section className='hero relative min-h-screen bg-cover bg-center transition-all duration-1000 ease-in-out'
+            style={{
+                backgroundImage: `url(${images[current]})`, opacity: 0.7
+            }}
+        >
+            <div className='absolute inset-0'>
+                <div className='relative flex justify-items-end items-end p-5'>
+                    <h1 className='text-6xl text-white font-extrabold text-end'>Welcome to my <br /><span className='text-amber-700 text-center'>warm paws</span></h1>
+
                 </div>
-                <div id="item2" className="carousel-item relative w-full">
-                    <img
-                        src="/bg2.jpg"
-                        className="w-full filter brightness-75 opacity-80" />
-                </div>
-                <div id="item3" className="carousel-item relative w-full">
-                    <img
-                        src="/bg3.jpg"
-                        className="w-full filter brightness-75 opacity-80" />
-                </div>
-                <div id="item4" className="carousel-item relative w-full">
-                    <img
-                        src="/bg4.jpg"
-                        className="w-full filter brightness-75 opacity-80" />
-                </div>
-                <div id="item5" className="carousel-item relative w-full">
-                    <img
-                        src="/bg5.jpg"
-                        className="w-full filter brightness-75 opacity-80" />
-                </div>
-                <div className="absolute inset-0 flex flex-col items-start justify-center text-center z-20 w-11/12 mx-auto p-8">
-        <h1 className="text-6xl text-white font-extrabold drop-shadow-lg">
-          WELCOME TO MY <br />
-          <span className="text-orange-500">WARM PAWS</span>
-        </h1>
-        <p className='text-white font-semibold text-xl p-5'>Keeping every paw warm, happy, <br /> and safe this winter.</p>
-      </div>
             </div>
-            <div className="flex w-full justify-center gap-2 py-2">
-                <a href="#item1" className="btn btn-xs">1</a>
-                <a href="#item2" className="btn btn-xs">2</a>
-                <a href="#item3" className="btn btn-xs">3</a>
-                <a href="#item4" className="btn btn-xs">4</a>
-                <a href="#item5" className="btn btn-xs">5</a>
-            </div>
-        </div>
+        </section>
     );
 };
 
