@@ -16,7 +16,7 @@ const SingleCard = ({ service }) => {
                     <p className='w-5 bg-amber-100 rounded text-center p-2 text-[15px] font-semibold'>Price: ${service.price}</p>
                 </div>
                 <div className="card-actions justify-center">
-                <Link to={`/services/${service.id}`} className="btn btn-primary">View details</Link>
+                <Link to={`/serviceDetails/${service.id}`} className="btn btn-primary">View details</Link>
                 </div>
             </div>
         </div>
