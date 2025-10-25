@@ -5,7 +5,7 @@ Warm Paws is a responsive web application designed to help pet owners take bette
 The main purpose of this project is to assist pet owners in keeping their pets comfortable in winter through easy access to services and information. Users can explore different winter care options, book services online, and manage their profiles securely. The app also educates owners about proper winter nutrition, clothing, and health tips for pets.
 
 ## live URL
-
+https://pet-care-in-winter-174a3.web.app
 
 ## Key Features:
 #### Winter Pet Care Services: 
@@ -40,6 +40,10 @@ For smooth and modern toast notifications.
 Icon library providing stylish and customizable icons.
 ##### Firebase : 
 For authentication, hosting, and backend integration.
+##### animate.css: 
+For use CSS animations in web application.
+##### react-spring:
+React animation library.
 
 
 
