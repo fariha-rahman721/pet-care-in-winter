@@ -17,7 +17,9 @@ const Hero = () => {
         return () => clearInterval(interval);
     }, []);
     return (
-        <section className='hero relative w-11/12 mx-auto min-h-screen bg-cover bg-center transition-all duration-1000 ease-in-out'
+        <section className='hero relative w-11/12 mx-auto bg-cover bg-center bg-no-repeat 
+  min-h-[80vh] sm:min-h-[90vh] md:min-h-screen 
+  lg:w-11/12 lg:mx-auto transition-all duration-1000 ease-in-out'
             style={{
                 backgroundImage: `url(${images[current]})`, opacity: 0.7
             }}

@@ -27,7 +27,7 @@ const Navbar = () => {
         } to='/myProfile'>MyProfile</NavLink>
     </>
     return (
-        <div className="w-11/12 mx-auto navbar bg-transparent">
+        <div className="w-11/12 mx-auto  lg:w-11/12 lg:mx-auto navbar bg-transparent">
             
             <div className="navbar-start">
                 <div className="dropdown">
@@ -42,8 +42,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex gap-2">
-                <img className='w-13 h-13 rounded-full' src="/logo.jpg" alt="" />
-                <a className="btn btn-ghost text-xl">Warm paws</a>
+                <img className='w-8 h-8 lg:w-13 lg:h-13 rounded-full' src="/logo.jpg" alt="" />
+                <h1 className="text-sm text-center font-semibold mt-1 lg:text-xl">Warm paws</h1>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -52,7 +52,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <img className='w-13 h-13 mr-3 rounded-full' src={`${user? user.photoURL : userIcon}`} alt="" />
+                <img className='w-7 h-7 mr-1 lg:w-10 lg:h-10 lg:mr-3 rounded-full' src={`${user? user.photoURL : userIcon}`} alt="" />
                 {
                     user? <button onClick={handleLogout} className='btn bg-amber-600 text-white hover:bg-amber-400 cursor-pointer'>LogOut</button> : <NavLink to='/auth/login' className='btn bg-amber-600 hover:bg-amber-400 text-white cursor-pointer'>Login</NavLink>
                 }

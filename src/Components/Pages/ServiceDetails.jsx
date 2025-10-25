@@ -24,6 +24,7 @@ const ServiceDetails = () => {
             </header>
 
             <main className='w-11/12 mx-auto'>
+            
             <CardDetails key={details.id} details={details}></CardDetails>
                 <BookForm></BookForm>
                 </main>

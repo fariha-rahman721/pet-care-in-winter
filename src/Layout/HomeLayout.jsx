@@ -12,6 +12,8 @@ import ExpertInfo from '../Components/ExpertInfo/ExpertInfo';
 import Footer from '../Components/Footer/Footer';
 import Navbar from '../Components/Navbar';
 import Loading from '../Components/Pages/Loading';
+import CustomerTestimonials from '../Components/Pages/CustomerTestimonials';
+import NewsLetterSubscribe from '../Components/Pages/NewsLetterSubscribe';
 
 const HomeLayout = () => {
     const {state} = useNavigation()
@@ -32,7 +34,9 @@ const HomeLayout = () => {
                <CareTips></CareTips>
                 <ExpertInfo></ExpertInfo>
             </section>
+            <CustomerTestimonials></CustomerTestimonials>
         </main>
+        <NewsLetterSubscribe></NewsLetterSubscribe>
         <footer>
           <Footer></Footer>
         </footer>
