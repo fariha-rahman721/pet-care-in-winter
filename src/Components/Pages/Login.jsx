@@ -1,9 +1,10 @@
 import React, { use, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../Provider/AuthProvider';
-import { GoogleAuthProvider, sendPasswordResetEmail, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '../../firebase/firebase.config';
 import toast, { Toaster } from 'react-hot-toast';
+import { EyeIcon, EyeOffIcon } from 'lucide-react';
 
 const googleProvider = new GoogleAuthProvider()
 
@@ -11,6 +12,7 @@ const Login = () => {
 
 
     const [error, setError] = useState('')
+    const [showPassword, setShowPassword] = useState(false)
     const { signIn } = use(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
@@ -24,7 +26,7 @@ const Login = () => {
         signIn(email, password).then(result => {
             const user = result.user;
             toast.success(`Welcome ${user.displayName || "User"}!`);
-            
+
             // console.log(user)
             navigate(`${location.state ? location.state : '/'}`)
         })
@@ -34,18 +36,16 @@ const Login = () => {
             })
     }
 
-    const handleForgetPassword = () =>{
-     const email = emailRef.current.value
-     sendPasswordResetEmail(auth, email)
-     .then(() =>{
-        toast('please check your email')
-     })
-     .catch(error =>{
-        const errorMessage = error.message;
-        toast.error(errorMessage)
-     })
-    }
+    const handleForgetPassword = () => {
+        const email = emailRef.current.value;
+        if (!email) {
+            toast.error('Please enter your email first!');
+            return;
+        }
 
+       
+        navigate('/auth/forget-password', { state: { email } });
+    };
 
 
 
@@ -69,13 +69,33 @@ const Login = () => {
                         {/* email */}
                         <label className="label">Email</label>
                         <input
-                         name="email" 
-                         type="email" 
-                         ref={emailRef}
-                         className="input" placeholder="Email" required />
+                            name="email"
+                            type="email"
+                            ref={emailRef}
+                            className="input" placeholder="Email" required />
                         {/* password */}
-                        <label className="label">Password</label>
-                        <input name="password" type="password" className="input" placeholder="Password" required />
+                         <label className="label">Password</label>
+            <div className="relative">
+              <input
+                name="password"
+                type={showPassword ? 'text' : 'password'}
+                className="input w-full pr-10"
+                placeholder="Password"
+                required
+              />
+              {/* 👁 Eye icon */}
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-3 text-gray-500 hover:text-gray-800"
+              >
+                {showPassword ? (
+                  <EyeOffIcon className="w-5 h-5" />
+                ) : (
+                  <EyeIcon className="w-5 h-5" />
+                )}
+              </button>
+            </div>
                         <div onClick={handleForgetPassword}><a className="link link-hover">Forgot password?</a></div>
                         {error && <p className='text-red-400 text-xs'>{error}</p>}
                         <button type="submit" className="btn btn-neutral mt-4">Login</button>
@@ -91,7 +111,7 @@ const Login = () => {
             </div>
             <Toaster></Toaster>
         </div>
-        
+
     );
 };
 

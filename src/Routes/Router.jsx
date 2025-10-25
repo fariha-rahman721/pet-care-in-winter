@@ -10,6 +10,7 @@ import CardDetails from "../Components/CardDetails/CardDetails";
 import PrivateRoute from "../Provider/PrivateRoute";
 import Loading from "../Components/Pages/Loading";
 import ServiceDetails from "../Components/Pages/ServiceDetails";
+import ForgetPassword from "../Components/Pages/ForgetPassword";
 
 
 const router = createBrowserRouter(
@@ -63,7 +64,10 @@ const router = createBrowserRouter(
                     element: <Register></Register>,
                 },
                 
-
+                 {
+                    path: '/auth/forget-password',
+                    element: <ForgetPassword></ForgetPassword>
+                 }
             ]
 
         },
