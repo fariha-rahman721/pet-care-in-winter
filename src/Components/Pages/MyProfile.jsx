@@ -3,6 +3,7 @@ import Navbar from '../Navbar';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import toast from 'react-hot-toast';
+import Footer from '../Footer/Footer';
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
@@ -35,8 +36,8 @@ const MyProfile = () => {
       </header>
 
       <main>
-        <div className="flex justify-center items-center min-h-screen bg-base-200">
-          <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="flex justify-center items-center min-h-screen ">
+          <div className="card w-96 bg-linear-to-r from-orange-100 via-orange-200 to-orange-300 rounded-2xl shadow-lg">
             <figure className="px-10 pt-10">
               <img
                 src={user?.photoURL || "https://i.ibb.co/2FsfXqM/default-avatar.png"}
@@ -88,6 +89,7 @@ const MyProfile = () => {
           </div>
         </div>
       </main>
+      <Footer></Footer>
     </div>
   );
 };

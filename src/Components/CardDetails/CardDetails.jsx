@@ -4,11 +4,11 @@ const CardDetails = ({ details }) => {
 
 
     return (
-        <div className="w-11/12 lg:w-11/12 flex flex-col mx-auto gap-10 justify-center items-center p-8 bg-linear-to-r from-orange-100 via-orange-200 to-orange-300 rounded-2xl shadow-lg mt-10">
+        <div className="w-11/12 mx-auto lg:w-11/12 flex flex-col lg:mx-auto gap-10 justify-center items-center p-8 bg-linear-to-r from-orange-100 via-orange-200 to-orange-300 rounded-2xl shadow-lg mt-10">
             
             <div className="">
 
-                <img className="w-60 h-50 lg:w-96 lg:h-86 rounded-xl"
+                <img className="w-58 h-45 lg:w-96 lg:h-86 rounded-xl"
                     src={details.image}
                     alt="" />
 
